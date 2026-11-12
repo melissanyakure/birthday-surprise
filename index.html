@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Mercyyy🫂❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Chewy&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#b69be8;--dark:#7b5cc4}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Patrick Hand',cursive;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;
+background:repeating-linear-gradient(90deg,#fffbd0 0 28px,#fff 28px 56px);overflow-y:auto;overflow-x:hidden;color:var(--dark)}
+.blob{position:fixed;width:60vmax;height:60vmax;background:var(--purple);opacity:.55;border-radius:45%;z-index:0}
+.b1{top:-35vmax;left:-25vmax}.b2{bottom:-38vmax;right:-28vmax}
+.screen{display:none;position:relative;z-index:1;width:100%;max-width:560px;min-height:100vh;margin:auto;padding:24px;
+text-align:center;flex-direction:column;align-items:center;justify-content:center;gap:18px;animation:pop .5s ease}
+.screen.active{display:flex}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+h1,h2{font-family:'Chewy',cursive;font-weight:400}
+h2{font-size:2rem}
+.btn{font-family:'Chewy',cursive;font-size:1.6rem;background:var(--purple);color:#fff;border:0;border-radius:30px;
+padding:8px 34px;cursor:pointer;box-shadow:0 5px 0 var(--dark);transition:.15s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--dark)}
+.row{display:flex;gap:18px;justify-content:center;min-height:60px}
+/* passcode */
+.dots{display:flex;gap:10px}
+.dots span{width:46px;height:46px;border:3px solid #fff;border-radius:10px;background:rgba(255,255,255,.55);
+display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.pad{display:grid;grid-template-columns:repeat(3,70px);gap:12px}
+.pad button{height:56px;border-radius:50%;border:3px solid var(--dark);background:#fff;font:700 1.6rem 'Patrick Hand';color:#d33;cursor:pointer}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+.avatar{width:190px;height:190px;border-radius:50%;border:10px solid var(--purple);background:#fff;
+display:flex;align-items:center;justify-content:center;font-size:5rem;overflow:hidden;
+outline:6px dotted var(--purple);outline-offset:6px}
+/* all photos fill their frame completely */
+.avatar img,.cam img,.grid img{width:100%;height:100%;object-fit:cover;object-position:center}
+.avatar img{object-position:center 30%}
+/* birthday */
+.ransom{font-family:'Special Elite',monospace;font-size:2.6rem;line-height:1.1;letter-spacing:2px}
+.ransom span{display:inline-block;padding:0 6px;margin:2px;background:#fff;box-shadow:2px 2px 0 #0002;font-weight:700}
+.cam{width:min(340px,88vw,calc(58vh * .75 + 36px));background:#ddd;border-radius:18px;padding:14px;border:4px solid #bbb;box-shadow:0 8px 0 #aaa}
+.cam div{width:100%;aspect-ratio:3/4;background:#fce;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:5rem}
+/* memories */
+.logo{font-family:'Chewy';font-size:3rem}
+.logo b:nth-child(1){color:#4285f4}.logo b:nth-child(2){color:#ea4335}.logo b:nth-child(3){color:#fbbc05}
+.logo b:nth-child(4){color:#4285f4}.logo b:nth-child(5){color:#34a853}.logo b:nth-child(6){color:#ea4335}
+.logo b:nth-child(7){color:#fbbc05}.logo b:nth-child(8){color:#34a853}
+.search{width:100%;background:#fff;border-radius:30px;padding:10px 18px;text-align:left;box-shadow:0 2px 8px #0003;color:#444}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+.grid div{aspect-ratio:3/4;border-radius:10px;background:linear-gradient(135deg,#ffd6e8,#d6c8ff);overflow:hidden;
+display:flex;align-items:center;justify-content:center;font-size:2.4rem;box-shadow:0 3px 8px #0003}
+/* letter */
+.letter{background:#fff9ec;border-radius:16px;padding:22px;line-height:1.5;font-size:1.25rem;
+box-shadow:0 6px 18px #0003;text-align:left;color:#7a3b3b}
+/* hug */
+.hugwrap{position:relative;width:300px;max-width:90%}
+.amigurumi{width:100%;height:auto;animation:squeeze 1.4s ease-in-out infinite alternate;transform-origin:50% 90%}
+.amigurumi *{stroke:rgba(0,0,0,.16);stroke-width:1.6;stroke-dasharray:3 3}
+.amigurumi .f{stroke:#3a2a22;stroke-width:3;stroke-dasharray:none;fill:none;stroke-linecap:round}
+@keyframes squeeze{from{transform:scale(1) rotate(-1deg)}to{transform:scale(1.06) rotate(1deg)}}
+.heart{position:absolute;top:0;font-size:1.6rem;opacity:0;animation:floatup 2.4s ease-in infinite}
+.heart:nth-of-type(1){left:30%}.heart:nth-of-type(2){left:50%;animation-delay:.8s}.heart:nth-of-type(3){left:68%;animation-delay:1.6s}
+@keyframes floatup{0%{opacity:0;transform:translateY(20px)}30%{opacity:1}100%{opacity:0;transform:translateY(-50px)}}
+.bar{width:80%;height:14px;background:#fff;border-radius:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--dark);transition:width 3s linear}
+.player{background:#fff;border-radius:14px;padding:16px;width:100%;box-shadow:0 4px 12px #0003}
+.fall{position:fixed;top:-40px;font-size:1.6rem;animation:fall linear forwards;z-index:2;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+
+<!-- 1. PASSCODE -->
+<section class="screen active" id="s-pass">
+  <div class="avatar" id="avatarMain">🐶</div>
+  <h2>Enter a passcode 🔒</h2>
+  <div class="dots" id="dots"><span></span><span></span><span></span><span></span></div>
+  <div class="pad" id="pad"></div>
+  <small id="hint"></small>
+</section>
+
+<!-- 2. YES / NO -->
+<section class="screen" id="s-ask">
+  <h1 style="font-size:2.2rem" id="askText"></h1>
+  <div style="font-size:6rem">🐶🌸</div>
+  <div class="row"><button class="btn" id="yes">Yes</button><button class="btn" id="no">No</button></div>
+</section>
+
+<!-- 3. HAPPY BIRTHDAY -->
+<section class="screen" id="s-bday">
+  <div class="ransom" id="happy"></div>
+  <div class="cam"><div id="camPhoto">📸</div></div>
+  <div class="ransom" id="bday"></div>
+  <button class="btn" id="n1">Next ➜</button>
+</section>
+
+<!-- 4. MEMORIES -->
+<section class="screen" id="s-mem">
+  <div class="logo"><b>M</b><b>e</b><b>m</b><b>o</b><b>r</b><b>i</b><b>e</b><b>s</b></div>
+  <div class="search">🔍 Moments of us❤️</div>
+  <div class="grid" id="grid"></div>
+  <button class="btn" id="n2">Next ➜</button>
+</section>
+
+<!-- 5. LETTER -->
+<section class="screen" id="s-msg">
+  <div class="letter" id="letter"></div>
+  <button class="btn" id="n3">Next ➜</button>
+</section>
+
+<!-- 6. VIRTUAL HUG (two amigurumi animals) -->
+<section class="screen" id="s-hug">
+  <div class="hugwrap">
+    <span class="heart">🧸</span><span class="heart">💖</span><span class="heart">💜</span>
+    <svg class="amigurumi" viewBox="0 0 300 235" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="182" rx="50" ry="48" fill="#c98f58"/>
+      <ellipse cx="200" cy="182" rx="50" ry="48" fill="#fdf7f2"/>
+      <ellipse cx="172" cy="40" rx="13" ry="32" fill="#fdf7f2" transform="rotate(-8 172 40)"/>
+      <ellipse cx="172" cy="42" rx="6" ry="22" fill="#f7c6d4" transform="rotate(-8 172 42)"/>
+      <ellipse cx="214" cy="40" rx="13" ry="32" fill="#fdf7f2" transform="rotate(8 214 40)"/>
+      <ellipse cx="214" cy="42" rx="6" ry="22" fill="#f7c6d4" transform="rotate(8 214 42)"/>
+      <circle cx="78" cy="68" r="15" fill="#d9a46c"/><circle cx="78" cy="68" r="8" fill="#f0c9a0"/>
+      <circle cx="134" cy="68" r="15" fill="#d9a46c"/><circle cx="134" cy="68" r="8" fill="#f0c9a0"/>
+      <circle cx="106" cy="108" r="44" fill="#d9a46c"/>
+      <circle cx="194" cy="108" r="44" fill="#fdf7f2"/>
+      <path class="f" d="M87 108 q6 -8 12 0"/><path class="f" d="M113 108 q6 -8 12 0"/>
+      <ellipse cx="106" cy="124" rx="15" ry="11" fill="#f3dcc0"/>
+      <ellipse cx="106" cy="119" rx="5" ry="3.5" fill="#4a2c1a" style="stroke:none"/>
+      <path class="f" d="M106 122 v4 M100 127 q6 5 12 0" style="stroke-width:2"/>
+      <circle cx="82" cy="122" r="6" fill="#f7a8b8" opacity=".6" style="stroke:none"/>
+      <path class="f" d="M175 108 q6 -8 12 0"/><path class="f" d="M201 108 q6 -8 12 0"/>
+      <ellipse cx="194" cy="120" rx="4.5" ry="3.2" fill="#f5a3b5" style="stroke:none"/>
+      <path class="f" d="M194 123 v4 M188 128 q6 5 12 0" style="stroke-width:2"/>
+      <circle cx="222" cy="122" r="6" fill="#f7a8b8" opacity=".6" style="stroke:none"/>
+      <ellipse cx="150" cy="186" rx="48" ry="14" fill="#fdf7f2" transform="rotate(4 150 186)"/>
+      <circle cx="100" cy="190" r="13" fill="#fdf7f2"/>
+      <ellipse cx="150" cy="172" rx="48" ry="14" fill="#c98f58" transform="rotate(-4 150 172)"/>
+      <circle cx="200" cy="168" r="13" fill="#c98f58"/>
+    </svg>
+  </div>
+  <h2 id="hugText">Virtual hug loading...</h2>
+  <div class="bar"><i id="bar"></i></div>
+  <button class="btn" id="n4" style="display:none">Next ➜</button>
+</section>
+
+<!-- 7. SONG -->
+<section class="screen" id="s-song">
+  <h2>One last thing... 🎶</h2>
+  <div class="player">
+    <div style="font-size:3rem">🎧</div>
+    <p id="songName" style="font-size:1.4rem;margin:8px 0 14px"></p>
+    <a id="songLink" target="_blank" rel="noopener"><button class="btn">▶ Play song😊</button></a>
+  </div>
+  <p id="signoff" style="font-size:1.4rem"></p>
+  <button class="btn" id="again">Replay 🔁</button>
+</section>
+
+<script>
+/* ========= EDIT THIS PART ========= */
+const CONFIG = {
+  name: "Mercy",
+  from: "Melissa",
+  passcode: "1611",                  // e.g. her birthday as DDMM
+  hint: "Hint: Your special dayyy💕",
+  mainPhoto: "photo1.jpeg",
+  cameraPhoto: "photo2.jpeg",
+  memories: ["photo1.jpeg", "photo2.jpeg", "photo3.jpeg"],
+  message: `Dear Mercy,
+
+Happy Birthdayyyy!🎉Today is all about you. I just want you to know how grateful I am to have you in my life.
+
+Through all the laughs, random conversations, inside jokes, and even the tough days, you've made life so much better just by being a part of it.
+
+I hope this year brings you everything you've been wishing for — happiness, success, peace, good health, and countless reasons to smile. Never forget how amazing, kind, and loved you are.
+
+No matter where life takes us, I hope we always stay this close and keep making memories together. Thank you for being the wonderful person you are and for making my life brighter every single day.`,
+  songName: "A song for you 🧸❤️",
+  songLink: "https://youtu.be/OXKNU6yOjqY?si=aWKbS5ghAnbjSoy-"
+};
+/* ================================== */
+
+const $ = id => document.getElementById(id);
+const show = id => { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); $(id).classList.add('active'); window.scrollTo(0,0); };
+
+// If a photo isn't found, try the other ending (.jpeg <-> .jpg), then show an emoji
+function imgErr(el){
+  if (!el.dataset.t) {
+    el.dataset.t = 1;
+    const s = el.getAttribute('src');
+    el.src = /\.jpeg$/i.test(s) ? s.replace(/\.jpeg$/i, '.jpg') : s.replace(/\.jpg$/i, '.jpeg');
+  } else {
+    el.parentNode.textContent = el.dataset.fb;
+  }
+}
+const img = (src, fallback) => src
+  ? `<img src="${src}" data-fb="${fallback}" alt="" onerror="imgErr(this)">`
+  : fallback;
+
+document.title = `Happy Birthday ${CONFIG.name}🧸`;
+$('askText').textContent = "Hey! I made something for you, do you wanna see it?";
+$('hint').textContent = CONFIG.hint;
+$('avatarMain').innerHTML = img(CONFIG.mainPhoto, '🐶');
+$('camPhoto').innerHTML = img(CONFIG.cameraPhoto, '📸');
+$('letter').innerHTML = CONFIG.message.replace(/\n/g, '<br>') + `<br><br>With love,<br><b>${CONFIG.from}</b> 💜`;
+$('songName').textContent = CONFIG.songName;
+$('songLink').href = CONFIG.songLink;
+$('signoff').textContent = `Happy Birthday, ${CONFIG.name}! 🎂❤️`;
+const emojis = ['🥰','👯','🌷'];
+$('grid').innerHTML = CONFIG.memories.map((m, i) => `<div>${img(m, emojis[i % 3])}</div>`).join('');
+
+// ransom-style letters
+const colors = ['#ffd6e8','#d6c8ff','#fff3a8','#c8f0ff','#ffe0c8'];
+const ransom = (el, txt) => el.innerHTML = [...txt].map(c =>
+  `<span style="background:${colors[Math.random()*5|0]};transform:rotate(${Math.random()*10-5}deg)">${c}</span>`).join('');
+ransom($('happy'), "HAPPY");
+ransom($('bday'), "BIRTHDAY");
+
+// keypad
+let entered = "";
+['1','2','3','4','5','6','7','8','9','*','0','#'].forEach(k => {
+  const b = document.createElement('button'); b.textContent = k;
+  b.onclick = () => press(k); $('pad').appendChild(b);
+});
+function press(k){
+  if (entered.length >= 4) return;
+  entered += k; render();
+  if (entered.length === 4) setTimeout(() => {
+    if (entered === CONFIG.passcode) show('s-ask');
+    else { $('dots').classList.add('shake'); setTimeout(() => $('dots').classList.remove('shake'), 400); entered = ""; render(); }
+  }, 250);
+}
+function render(){ [...$('dots').children].forEach((d, i) => d.textContent = entered[i] ? '•' : ''); }
+
+// yes / no
+const noLines = ["No", "Are you sure? 🥺", "Please? 🥹", "Pretty please ❤️", "Okay just click Yes 😭"];
+let noCount = 0;
+$('no').onclick = () => { noCount++; $('no').textContent = noLines[Math.min(noCount, 4)];
+  $('yes').style.transform = `scale(${1 + noCount * .25})`; };
+$('yes').onclick = () => { show('s-bday'); confetti(); };
+
+// navigation
+$('n1').onclick = () => show('s-mem');
+$('n2').onclick = () => show('s-msg');
+$('n3').onclick = () => { show('s-hug'); startHug(); };
+$('n4').onclick = () => { show('s-song'); confetti(); };
+$('again').onclick = () => { entered = ""; render(); noCount = 0; $('no').textContent = "No"; $('yes').style.transform = ""; show('s-pass'); };
+
+function startHug(){
+  $('bar').style.width = "0"; $('n4').style.display = "none"; $('hugText').textContent = "Virtual hug loading...";
+  setTimeout(() => $('bar').style.width = "100%", 50);
+  setTimeout(() => { $('hugText').textContent = "Hug delivered! 🤗❤️"; $('n4').style.display = "block"; }, 3200);
+}
+
+function confetti(){
+  const set = ['🎉','🎈','🧸','✨','🎂','🌸','⭐'];
+  for (let i = 0; i < 40; i++) setTimeout(() => {
+    const e = document.createElement('div'); e.className = 'fall'; e.textContent = set[Math.random()*set.length|0];
+    e.style.left = Math.random()*100 + 'vw'; e.style.animationDuration = 3 + Math.random()*3 + 's';
+    document.body.appendChild(e); setTimeout(() => e.remove(), 6500);
+  }, i * 90);
+}
+</script>
+</body>
+</html>
+
+
